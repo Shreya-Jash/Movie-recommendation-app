@@ -1,12 +1,18 @@
+
 .details{
     width:40vw;
     height: 470px;
     z-index: 1000;
     border: 2px solid black;
     position: absolute;
-    top: 25%;
+    top: 10em;
     left: 30vw;
     background-color: white;
+    filter: blur(0px);
+    -webkit-filter: blur(0px);
+    -moz-filter: blur(0px);
+    -o-filter: blur(0px);
+    -ms-filter: blur(0px);
 }
 
 .detailsTextBox{

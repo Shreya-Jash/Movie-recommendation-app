@@ -28,8 +28,8 @@ function App() {
   }
 
   return (
-    <div className="App">
-      <Navbar handleChange={handleChange} />
+    <div className="App" id='blur' >
+      <Navbar handleChange={handleChange}/>
       <h2>Most Recent Movies</h2>
       <section className='gridContainer'>
         {cards.map((movie,index)=>{

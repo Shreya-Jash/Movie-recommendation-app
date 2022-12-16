@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useLayoutEffect, useState } from 'react'
 import "../style/cards.css"
 import Details from './Details'
 
@@ -8,9 +8,28 @@ export default function Cards(props){
 
   function handleClick()
   {
+    
+    const Blur = document.getElementById("blur")
+    Blur.style.webkitFilter = "blur(5px)";
+    console.log(Blur)
     setPopup(prev=>!prev)
   }
 
+  useLayoutEffect(() => {
+    try{
+        const UnBlur = document.getElementById("unblur")
+    UnBlur.style.webkitFilter = "blur(0px)"; 
+    console.log(UnBlur)
+    }
+    catch{console.log("error")}
+  }, [])
+
+  // if (popup) {
+  //   const UnBlur = document.getElementById("unblur")
+  //   // UnBlur.style.webkitFilter = "blur(5px)"; 
+  //   console.log(UnBlur)
+  // }///sute ja bas na sute ja
+  
   return (
     <div>
       {popup && <Details popup={setPopup} data={props}/>} 

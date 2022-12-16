@@ -7,7 +7,7 @@ export default function Details(props) {
 
 
   return (
-    <div className='details'>
+    <div className='details' id="unblur">
         <div className='detailshead'>
                 <div className='title'>{props.data.original_title}</div>
                 <img className='close' src={cross} alt="close" onClick={()=>{props.popup(prev=>!prev)}}/>
