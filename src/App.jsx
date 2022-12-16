@@ -1,11 +1,11 @@
 import { useState,useEffect } from 'react'
 import axios from 'axios'
-import TMDBAPI from './components/TMDBAPI'
-import { BrowserRouter, Route, Routes} from 'react-router-dom'
+import { BrowserRouter, Route, Router, Routes} from 'react-router-dom'
 import './App.css'
 
 import Navbar from './components/Navbar'
 import Cards from './components/Cards'
+import Details from './components/Details'
 
 function App() {
   const [cards, setCards] = useState([])
@@ -27,19 +27,22 @@ function App() {
     setSearch(e.target.value);
   }
   
+  
 
   return (
     <div className="App">
-      <Navbar />
+      <Navbar handleChange={handleChange} />
       <h2>Most Recent Movies</h2>
       <section className='gridContainer'>
         {cards.map((movie,index)=>{
           return (
-            <Cards key={index} {...movie}/>
+            <Cards 
+              key={index} 
+              {...movie}
+            />
           )
         })}
       </section>
-      
     </div>
   )
 }
