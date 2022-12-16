@@ -1,29 +1,23 @@
 import React from 'react'
-import "../style/details.css"
+import "../style/Details.css"
+import cross from "../assets/cross.png"
 
-function getPosterURL(posterpath){
-    return `https://www.themoviedb.org/t/p/w220_and_h330_face${posterpath}`
-  }
+export default function Details(props) {
+    console.log(props)
 
-export default function Details({
-    release_date,
-    original_title,
-    overview,
-    vote_average,
-    poster_path,
-    vote_count,
-    imgURL
-}) {
+
   return (
     <div className='details'>
-        <h1>{original_title}</h1>
-        <button>close</button>
+        <div className='detailshead'>
+                <div className='title'>{props.data.original_title}</div>
+                <img className='close' src={cross} alt="close" onClick={()=>{props.popup(prev=>!prev)}}/>
+        </div>
         <div className='detailsTextBox'>
-            <img src={getPosterURL(poster_path)} alt='Poster' />
-            <div>
-                <p>Release date: {release_date}</p>
-                <p>{overview}</p>
-                <p>{vote_average}/({vote_count} total votes)</p>
+            <img className='descript' src={"https://www.themoviedb.org/t/p/w220_and_h330_face"+props.data.poster_path} alt='Poster' />
+            <div className='descrip'>
+                <p>Release date: {props.data.release_date}</p>
+                <p>{props.data.overview}</p>
+                <p>{props.data.vote_average}/({props.data.vote_count} total votes)</p>
             </div>
         </div>
     </div>

@@ -26,8 +26,6 @@ function App() {
   {
     setSearch(e.target.value);
   }
-  
-  
 
   return (
     <div className="App">
