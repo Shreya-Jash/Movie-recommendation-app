@@ -1,0 +1,16 @@
+.gridContainer{
+    display: grid;
+  grid-template-columns: auto auto auto auto;
+  justify-content: space-evenly;
+}
+
+.rating{
+    border: 1px solid black;
+    border-radius: 20px;
+    width: fit-content;
+}
+
+.name{
+    text-align: center;
+    font-size: 12px;
+}
