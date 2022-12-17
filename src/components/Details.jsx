@@ -4,10 +4,10 @@ import cross from "../assets/cross.png"
 
 export default function Details(props) {
     console.log(props)
-    
+
   return (
     <div className='detailscon'>
-        <div className='details' id="popup">
+        <div className='details' id="unblur">
             <div className='detailshead'>
                     <div className='title'>{props.data.original_title}</div>
                     <img className='close' src={cross} alt="close" onClick={()=>{props.popup(prev=>!prev)}}/>
