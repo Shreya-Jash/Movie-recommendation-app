@@ -9,32 +9,36 @@ export default function Cards(props){
   function handleClick()
   {
     
-    const Blur = document.getElementById("blur")
-    Blur.style.webkitFilter = "blur(5px)";
-    console.log(Blur)
+    // const Blur = document.getElementById("blur")
+    // Blur.style.webkitFilter = "blur(5px)";
+    // // console.log(Blur)
+    // var blur=document.getElementById('blur');
+    //         blur.classList.toggle('active');
+    //         var popup = document.getElementById('popup');
+    //         popup.classList.toggle('active');
+    window.scrollTo({ top: 25, behavior: "smooth" });
     setPopup(prev=>!prev)
   }
 
-  useLayoutEffect(() => {
-    try{
-        const UnBlur = document.getElementById("unblur")
-    UnBlur.style.webkitFilter = "blur(0px)"; 
-    console.log(UnBlur)
-    }
-    catch{console.log("error")}
-  }, [])
+  // useLayoutEffect(() => {
+  //   try{
+  //       const UnBlur = document.getElementById("unblur")
+  //   UnBlur.style.webkitFilter = "blur(0px)"; 
+  //   console.log(UnBlur)
+  //   }
+  //   catch{console.log("error")}
+  // }, [])
 
   // if (popup) {
   //   const UnBlur = document.getElementById("unblur")
   //   // UnBlur.style.webkitFilter = "blur(5px)"; 
   //   console.log(UnBlur)
-  // }///sute ja bas na sute ja
+  // }
   
   return (
     <div>
       {popup && <Details popup={setPopup} data={props}/>} 
     <div className="cards" onClick={handleClick} >
-     
       <div>
         <div className='rating'>{props.vote_average}</div>
         <img src={"https://www.themoviedb.org/t/p/w220_and_h330_face"+props.poster_path} alt='Poster'/>

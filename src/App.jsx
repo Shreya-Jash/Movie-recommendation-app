@@ -28,7 +28,7 @@ function App() {
   }
 
   return (
-    <div className="App" id='blur' >
+    <div className="App"  >
       <Navbar handleChange={handleChange}/>
       <h2>Most Recent Movies</h2>
       <section className='gridContainer'>
