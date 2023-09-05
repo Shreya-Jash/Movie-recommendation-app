@@ -8,32 +8,9 @@ export default function Cards(props){
 
   function handleClick()
   {
-    
-    // const Blur = document.getElementById("blur")
-    // Blur.style.webkitFilter = "blur(5px)";
-    // // console.log(Blur)
-    // var blur=document.getElementById('blur');
-    //         blur.classList.toggle('active');
-    //         var popup = document.getElementById('popup');
-    //         popup.classList.toggle('active');
     window.scrollTo({ top: 25, behavior: "smooth" });
     setPopup(prev=>!prev)
   }
-
-  // useLayoutEffect(() => {
-  //   try{
-  //       const UnBlur = document.getElementById("unblur")
-  //   UnBlur.style.webkitFilter = "blur(0px)"; 
-  //   console.log(UnBlur)
-  //   }
-  //   catch{console.log("error")}
-  // }, [])
-
-  // if (popup) {
-  //   const UnBlur = document.getElementById("unblur")
-  //   // UnBlur.style.webkitFilter = "blur(5px)"; 
-  //   console.log(UnBlur)
-  // }
   
   return (
     <div>
